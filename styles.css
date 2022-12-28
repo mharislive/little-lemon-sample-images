@@ -1,0 +1,195 @@
+/* CSS validated via https://jigsaw.w3.org/css-validator/#validate_by_input with no errors and warning */
+
+/******************** COMMON ********************/
+/* resetting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* setting 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #edefee;
+  font-family: "Markazi Text", serif;
+  font-size: 1.6rem;
+  margin: 4.8rem 5%;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+header,
+nav,
+main,
+footer {
+  margin: 0 auto;
+  max-width: 84rem;
+}
+
+.btn {
+  background-color: #333;
+  border-radius: 1rem;
+  color: #fff;
+  display: inline-block;
+  outline: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #000;
+}
+
+.list {
+  border: 1px solid #333;
+  list-style: none;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+/******************** HEADER ********************/
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+}
+
+header > img {
+  display: flex;
+  max-width: 42rem;
+  width: 100%;
+}
+
+/******************** NAVBAR ********************/
+nav {
+  margin-bottom: 3.2rem;
+}
+
+.menu {
+  background-color: #333;
+  border-radius: 1rem;
+  display: flex;
+  font-size: 3.2rem;
+  justify-content: center;
+  list-style: none;
+  line-height: 1;
+}
+
+.menu a {
+  color: #fff;
+  display: flex;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #000;
+}
+
+/******************** MAIN CONTENT ********************/
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+article {
+  flex: 1;
+  background-color: #f4e5d6;
+  border-radius: 1rem;
+  margin-bottom: 3.2rem;
+  padding: 3rem 1.6rem;
+}
+
+article img {
+  margin: 2.4rem 0 1.6rem;
+  width: 100%;
+}
+
+/* big image with text */
+.hero-container {
+  background-image: url("hero.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3.2rem;
+}
+
+/* adding lint to make text readable */
+.hero-container::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-container > article {
+  background-color: transparent;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-container h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/******************** FOOTER ********************/
+footer {
+  display: flex;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer img {
+  max-width: 3.2rem;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+footer p::before {
+  border-top: 2px solid;
+  content: "";
+  display: block;
+}
+
+/* from 768 articles will take full width */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  article {
+    flex-basis: 100%;
+  }
+}
