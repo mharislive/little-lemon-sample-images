@@ -50,6 +50,7 @@ footer {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .btn:hover {
@@ -96,6 +97,7 @@ nav {
   display: flex;
   padding: 0.8rem;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .menu a:hover {
@@ -106,6 +108,10 @@ nav {
 .container {
   display: flex;
   gap: 2rem;
+}
+
+.img-container {
+  overflow: hidden;
 }
 
 article {
@@ -119,11 +125,16 @@ article {
 article img {
   margin: 2.4rem 0 1.6rem;
   width: 100%;
+  transition: all 0.3s;
+}
+
+article:hover img {
+  transform: scale(1.03);
 }
 
 /* big image with text */
 .hero-container {
-  background-image: url("hero.jpg");
+  background-image: url("https://raw.githubusercontent.com/mharislive/little-lemon-sample-images/main/hero.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 1rem;
@@ -183,7 +194,7 @@ footer p::before {
   display: block;
 }
 
-/* from 768 articles will take full width */
+/* below 769px screen size, articles will take full width */
 @media screen and (max-width: 768px) {
   .container {
     flex-wrap: wrap;
